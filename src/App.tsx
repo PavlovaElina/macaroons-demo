@@ -380,13 +380,6 @@ export default function App() {
                 >
                   Выбрать свой вкус <span>↗</span>
                 </a>
-                <a
-                  className="underlined"
-                  href="#catalog"
-                  onClick={() => goToOrder()}
-                >
-                  Собрать подарок
-                </a>
               </div>
               <p className="hero-footnote">
                 4 любимых вкуса <span>✦</span> Коробочки на 6 и 12 штук

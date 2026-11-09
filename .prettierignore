@@ -1,0 +1,8 @@
+node_modules/
+dist/
+public/mockServiceWorker.js
+original/
+.local-notes/
+playwright-report/
+test-results/
+package-lock.json

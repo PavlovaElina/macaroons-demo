@@ -1,0 +1,50 @@
+{
+  "name": "macaroons-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5174",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4174",
+    "test": "vitest run src",
+    "test:e2e": "playwright test",
+    "check": "npm run lint && npm test && npm run build",
+    "lint": "eslint src vite.config.ts playwright.config.ts tests",
+    "format": "prettier --write src tests docs scripts *.ts *.js *.json *.html *.md .github/workflows/*.yml",
+    "format:check": "prettier --check src tests docs scripts *.ts *.js *.json *.html *.md .github/workflows/*.yml"
+  },
+  "dependencies": {
+    "msw": "2.15.0",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "1.65.0",
+    "@types/node": "26.6.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "6.2.1",
+    "eslint": "^10.14.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^17.14.0",
+    "prettier": "^3.9.10",
+    "typescript": "6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vite": "8.3.6",
+    "vitest": "5.1.0"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
+  },
+  "overrides": {
+    "minimatch": "^11.0.1"
+  }
+}
